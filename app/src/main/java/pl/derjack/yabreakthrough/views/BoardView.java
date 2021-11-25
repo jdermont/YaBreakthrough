@@ -195,14 +195,13 @@ public class BoardView extends View {
         if (boardListener != null) {
             boardListener.clicked(rowFrom, colFrom, rowTo, colTo);
         }
-        Log.d("dupa.cycki",rowFrom+" "+colFrom+" "+rowTo+" "+colTo);
         animate(squares[rowFrom][colFrom],squares[rowTo][colTo]);
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent motionEvent) {
         Log.d(TAG, "onTouchEvent "+motionEvent);
-        if (game != null && game.isOver()) {
+        if (game == null || game.isOver()) {
             return true;
         }
         if (valueAnimator != null && valueAnimator.isRunning()) {
