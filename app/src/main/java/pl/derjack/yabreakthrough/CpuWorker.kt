@@ -10,7 +10,7 @@ import java.util.concurrent.ScheduledExecutorService
 
 class CpuWorker(evaluator: Evaluator) {
     private val executor: ScheduledExecutorService = Executors.newSingleThreadScheduledExecutor()
-    private val cpu: Cpu = Cpu(evaluator)
+    val cpu: Cpu = Cpu(evaluator)
 
     fun doWork(game: Game, actionData: MutableLiveData<Action>) {
         cpu.updateGameState(game)

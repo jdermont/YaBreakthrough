@@ -9,7 +9,7 @@ public class BetterEvaluator implements Evaluator {
 
     @Override
     public long getThinkingTimeInMillis() {
-        return 1250L;
+        return 1000L;
     }
 
     @Override

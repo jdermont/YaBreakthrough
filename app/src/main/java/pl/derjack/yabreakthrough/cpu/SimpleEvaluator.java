@@ -15,7 +15,7 @@ public class SimpleEvaluator implements Evaluator {
 
     @Override
     public long getThinkingTimeInMillis() {
-        return 750L;
+        return 500L;
     }
 
     @Override
